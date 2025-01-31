@@ -44,7 +44,7 @@ def mysql_to_parquet_and_store_in_minio():
 
 # Define the DAG
 dag = DAG(
-    'mysql_to_parquet_to_minio',
+    'mysql_to_minio_users',
     description='Extract data from MySQL, convert to Parquet, and store in MinIO',
     schedule_interval=None,  # Set to None for manual trigger
     start_date=datetime(2025, 1, 31),

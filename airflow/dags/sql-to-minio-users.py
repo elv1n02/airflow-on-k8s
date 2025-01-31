@@ -35,7 +35,7 @@ def mysql_to_parquet_and_store_in_minio():
     # MinIO connection hook (Airflow's S3Hook can also be used for MinIO)
     s3_hook = S3Hook(aws_conn_id='minio_connection')  # Use your MinIO connection ID
     bucket_name = 'airflow'  # MinIO bucket name
-    object_name = 'orders.parquet'  # Path in the MinIO bucket
+    object_name = 'users.parquet'  # Path in the MinIO bucket
     
     # Upload the Parquet file to MinIO
     s3_hook.load_file_obj(parquet_buffer, object_name, bucket_name, replace=True)

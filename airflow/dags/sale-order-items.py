@@ -16,7 +16,7 @@ def mysql_to_parquet_and_store_in_minio():
     cursor = connection.cursor()
     
     # Query to get data from MySQL table
-    query = "SELECT * FROM sale_order_items"  # Change with your table name and query
+    query = "SELECT * FROM sales_order_items"  # Change with your table name and query
     cursor.execute(query)
     
     # Fetch the data

@@ -14,7 +14,7 @@ dag = DAG(
 # Define a bash command task
 bash_task = BashOperator(
     task_id='run_bash_command',
-    bash_command='pip intall dbt-duckdb',  # Your bash command here
+    bash_command='pip install dbt-duckdb',  # Your bash command here
     dag=dag,
 )
 

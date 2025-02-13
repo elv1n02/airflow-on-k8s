@@ -14,7 +14,7 @@ dag = DAG(
 # Define a bash command task
 bash_task = BashOperator(
     task_id='run_bash_command',
-    bash_command='dbt init my_project --profile my_project',  # Your bash command here
+    bash_command='cd .. && cd .. && cd .. && cd .. && dbt init my_project --profile my_project',  # Navigate up 4 directories and then run dbt
     dag=dag,
 )
 

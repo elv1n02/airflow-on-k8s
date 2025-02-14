@@ -11,6 +11,12 @@ dag = DAG(
     catchup=False,
 )
 
+bash_task_2 = BashOperator(
+    task_id='run_bash_command_2',
+    bash_command='export DBT_PROFILES_DIR=dbt-profiles/',  # Navigate up 4 directories and then run dbt
+    dag=dag,
+)
+
 # Define a bash command task
 bash_task = BashOperator(
     task_id='run_bash_command',
@@ -18,4 +24,4 @@ bash_task = BashOperator(
     dag=dag,
 )
 
-bash_task
+bash_task_2 > bash_task

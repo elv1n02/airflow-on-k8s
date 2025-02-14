@@ -12,7 +12,7 @@ dag = DAG(
 
 bash_task = BashOperator(
     task_id='run_bash_command',
-    bash_command='export DBT_PROFILES_DIR=/opt/airflow/dbt-profiles && dbt run --profiles-dir $DBT_PROFILES_DIR',
+    bash_command='export DBT_PROFILES_DIR=/opt/airflow/dbt-profiles && cd .. && cd .. && cd opt && cd airflow && cd my_project && dbt run',
     dag=dag,
 )
 

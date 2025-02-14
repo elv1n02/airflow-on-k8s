@@ -14,15 +14,10 @@ dag = DAG(
     catchup=False
 )
 
-dbt_run = KubernetesPodOperator(
-    namespace="default",
-    image="dbt-core:latest",  # Use your locally built dbt image
-    cmds=["dbt"],
-    arguments=["run"],
-    name="dbt-run",
-    task_id="dbt-run-task",
-    get_logs=True,
-    dag=dag
+bash_task = BashOperator(
+    task_id='run_bash_command',
+    bash_command='export DBT_PROFILES_DIR=/opt/airflow/dbt-profiles && cd .. && cd .. && cd opt && cd airflow && cd my_project && dbt run',
+    dag=dag,
 )
 
 dbt_run

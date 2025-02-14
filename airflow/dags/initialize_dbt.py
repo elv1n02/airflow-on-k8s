@@ -24,4 +24,4 @@ bash_task = BashOperator(
     dag=dag,
 )
 
-bash_task_2 > bash_task
+bash_task_2 >> bash_task

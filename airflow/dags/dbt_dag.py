@@ -20,4 +20,4 @@ bash_task = BashOperator(
     dag=dag,
 )
 
-dbt_run
+bash_task

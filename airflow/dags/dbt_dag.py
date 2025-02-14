@@ -1,6 +1,10 @@
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
+from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
+from datetime import datetime
+import os
+import boto3
 
 default_args = {
     "owner": "airflow",

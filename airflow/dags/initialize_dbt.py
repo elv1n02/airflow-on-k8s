@@ -14,7 +14,7 @@ dag = DAG(
 # Define a bash command task
 bash_task = BashOperator(
     task_id='run_bash_command',
-    bash_command='cd .. && cd .. && cd opt && cd airflow && ls',  # Navigate up 4 directories and then run dbt
+    bash_command='cd .. && cd .. && cd opt && cd airflow && cd my_project && dbt run',  # Navigate up 4 directories and then run dbt
     dag=dag,
 )
 

@@ -5,6 +5,7 @@ from datetime import datetime
 import os
 
 DAG_DIR = os.path.dirname(os.path.abspath(__file__))
+GX_DIR = os.path.dirname(os.path.abspath(__file__), 'gx')
 REQUIREMENTS_PATH = os.path.abspath(os.path.join(DAG_DIR, 'requirements.txt'))
 RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, 'run.py'))
 
@@ -37,7 +38,7 @@ with DAG(
 
     run_script = BashOperator(
         task_id='run_script',
-        bash_command=f'python3 {RUN_PATH}',
+        bash_command=f'ls {GX_DIR}',
     )
 
     print_dir >> print_path >> install_requirements >> run_script

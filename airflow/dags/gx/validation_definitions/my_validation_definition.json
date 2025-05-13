@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "0b9a71c2-2475-492d-b73a-5d8c4c5d6a11",
+      "name": "brands_dim_asset"
+    },
+    "batch_definition": {
+      "id": "48bed4b2-eecf-4738-9b22-541e262b53a9",
+      "name": "FULL_TABLE"
+    },
+    "datasource": {
+      "id": "20213bd8-e790-4f38-a328-47ff187b737f",
+      "name": "postgres_datasource"
+    }
+  },
+  "id": "1c654240-ed27-46ba-98cd-3d64ba010655",
+  "name": "my_validation_definition",
+  "suite": {
+    "id": "66235a11-9d2a-45a4-a062-8bd763829485",
+    "name": "my_expectation_suite"
+  }
+}

@@ -9,6 +9,8 @@ REQUIREMENTS_PATH = os.path.abspath(os.path.join(DAG_DIR, '..', 'requirements.tx
 RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, '..', 'run.py'))
 
 print(DAG_DIR)
+print(REQUIREMENTS_PATH)
+print(RUN_PATH)
 
 default_args = {
     'start_date': datetime(2024, 1, 1),

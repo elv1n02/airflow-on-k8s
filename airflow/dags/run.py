@@ -1,6 +1,10 @@
 import great_expectations as gx
+import os
 
-context = gx.get_context(mode='file')
+DAG_DIR = os.path.dirname(os.path.abspath(__file__))
+GX_DIR = os.path.abspath(os.path.join(DAG_DIR, 'gx'))
+
+context = gx.get_context(mode='file', project_root_dir=GX_DIR)
 print(context.checkpoints.all())
 
 checkpoint = context.checkpoints.get("my_checkpoint")

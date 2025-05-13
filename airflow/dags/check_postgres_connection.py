@@ -22,7 +22,7 @@ with DAG(
 
     install_requirements = BashOperator(
         task_id='install_requirements',
-        bash_command=f'pip install --user -r {REQUIREMENTS_PATH}',
+        bash_command=f'pip install -r {REQUIREMENTS_PATH}',
     )
 
     run_script = BashOperator(

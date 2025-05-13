@@ -6,7 +6,7 @@ import os
 
 DAG_DIR = os.path.dirname(os.path.abspath(__file__))
 REQUIREMENTS_PATH = os.path.abspath(os.path.join(DAG_DIR, 'requirements.txt'))
-RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, '..', 'run.py'))
+RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, 'run.py'))
 
 default_args = {
     'start_date': datetime(2024, 1, 1),

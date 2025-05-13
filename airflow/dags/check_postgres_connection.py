@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 DAG_DIR = os.path.dirname(os.path.abspath(__file__))
-GX_DIR = os.path.dirname(os.path.abspath(__file__), 'gx')
+GX_DIR = os.path.abspath(os.path.join(DAG_DIR, 'gx'))
 REQUIREMENTS_PATH = os.path.abspath(os.path.join(DAG_DIR, 'requirements.txt'))
 RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, 'run.py'))
 

@@ -38,7 +38,7 @@ with DAG(
 
     run_script = BashOperator(
         task_id='run_script',
-        bash_command=f'ls {GX_DIR}',
+        bash_command=f'python3 {RUN_PATH}',
     )
 
     print_dir >> print_path >> install_requirements >> run_script

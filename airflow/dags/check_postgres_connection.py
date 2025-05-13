@@ -4,6 +4,10 @@ from airflow.models import Variable
 from datetime import datetime
 import os
 
+DAG_DIR = os.path.dirname(os.path.abspath(__file__))
+REQUIREMENTS_PATH = os.path.abspath(os.path.join(DAG_DIR, '..', 'requirements.txt'))
+RUN_PATH = os.path.abspath(os.path.join(DAG_DIR, '..', 'run.py'))
+
 default_args = {
     'start_date': datetime(2024, 1, 1),
 }
@@ -18,12 +22,12 @@ with DAG(
 
     install_requirements = BashOperator(
         task_id='install_requirements',
-        bash_command=f'pip install -r {os.path.join("requirements.txt")}',
+        bash_command=f'pip install --user -r {REQUIREMENTS_PATH}',
     )
 
     run_script = BashOperator(
         task_id='run_script',
-        bash_command=f'python {os.path.join("run.py")}',
+        bash_command=f'python3 {RUN_PATH}',
     )
 
     install_requirements >> run_script

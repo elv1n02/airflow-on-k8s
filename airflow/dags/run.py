@@ -1,7 +1,7 @@
 import great_expectations as gx
 
 context = gx.get_context(mode='file')
-print(context.checkpoints)
+print(context.checkpoints.all())
 
 checkpoint = context.checkpoints.get("my_checkpoint")
 

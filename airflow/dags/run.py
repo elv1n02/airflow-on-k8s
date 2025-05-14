@@ -1,7 +1,7 @@
 import great_expectations as gx
 import os
 
-os.mkdirs('/opt/gx-dev', exist_ok = True)
+os.makedirs('/opt/gx-dev', exist_ok = True)
 
 # DAG_DIR = os.path.dirname(os.path.abspath(__file__))
 

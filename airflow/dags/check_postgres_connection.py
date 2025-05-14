@@ -23,7 +23,7 @@ with DAG(
     run_git_python = KubernetesPodOperator(
         task_id="clone_and_run",
         name="git-run",
-        namespace="default",
+        namespace="gx-dev",
         image="python:3.10",  # Has git + pip
         cmds=["bash", "-c"],
         arguments=[

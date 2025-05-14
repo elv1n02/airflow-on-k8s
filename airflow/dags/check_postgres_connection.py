@@ -33,6 +33,7 @@ with DAG(
             cd repo && \
             pip install -r requirements.txt && \
             python3 run.py
+            python3 upload_to_minio.py
             """
         ],
         is_delete_operator_pod=True,

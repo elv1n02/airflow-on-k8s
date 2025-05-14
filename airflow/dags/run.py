@@ -1,6 +1,8 @@
 import great_expectations as gx
 import os
 
+print(os.path.dirname(os.path.abspath(__file__)))
+
 DAG_DIR = os.path.dirname(os.path.abspath(__file__))
 
 context = gx.get_context(mode='file', project_root_dir=DAG_DIR)

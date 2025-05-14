@@ -61,5 +61,4 @@ with DAG(
         bash_command=f'python3 {RUN_PATH}',
     )
 
-    # print_dir >> print_path >> install_requirements >> run_script
     write_in_pod

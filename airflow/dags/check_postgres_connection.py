@@ -39,5 +39,3 @@ with DAG(
         get_logs=True,
         in_cluster=True,
     )
-
-    run_git_python
